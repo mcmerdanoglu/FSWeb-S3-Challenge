@@ -183,6 +183,37 @@ header {
   background-repeat: no-repeat;
 }
 
+header .container {
+  background-color: rgb(0, 4, 17, 0.8);
+}
+header h1 {
+  color: rgb(225, 239, 230);
+  text-align: center;
+  font-size: 6rem;
+  padding: 10px; /**/
+}
+
+header nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px; /**/
+}
+
+header nav a {
+  color: rgb(225, 239, 230);
+  font-size: 2rem;
+  padding: 9rem; /**/
+}
+.socialmedia {
+  text-align: center;
+}
+
+.socialmedia i {
+  color: rgb(225, 239, 230);
+  font-size: 3rem;
+  margin: 20px 25px;
+}
+
 /* spacers */
 .spacer {
   width: 100%;
@@ -203,6 +234,25 @@ header {
   background-color: rgb(0, 4, 17);
 }
 
+.gallery h2 {
+  color: rgb(225, 239, 230);
+  font-size: 5rem;
+  padding-top: 20px;
+}
+
+.gallery img {
+  height: 15vw;
+  width: 22vw;
+  margin: 1% auto; /**/
+}
+
+.gallery div {
+  display: flex;
+  justify-content: space-between;
+  width: 70vw;
+  flex-wrap: wrap;
+  margin: 10px auto;
+}
 /* about us section */
 .about {
   width: 100%;
@@ -225,10 +275,12 @@ header {
 
 .about h2 {
   width: 100%;
+  color: rgb(225, 239, 230);
 }
 
 .about-container .text {
   width: 50%;
+  color: rgb(225, 239, 230);
 }
 
 /* contact us section */
@@ -249,14 +301,17 @@ header {
 
 .contact h2 {
   padding-top: 5vh;
+  color: rgb(225, 239, 230);
 }
 
 .contact h3 {
   padding-top: 2.5vh;
+  color: rgb(225, 239, 230);
 }
 
 .contact p {
   padding: 0.5vh 0;
+  color: rgb(225, 239, 230);
 }
 
 .info {
@@ -278,6 +333,15 @@ header {
   width: 25%;
 }
 
+#phone,
+#email {
+  color: rgb(225, 239, 230);
+}
+
+/*hr {
+  background-color: rgb(0, 4, 17);
+}*/
+
 /* footer section */
 footer {
   width: 100%;
@@ -286,13 +350,79 @@ footer {
   font-size: 3rem;
 }
 
-/* mobile media query */
-@media (max-width: 428px) {
-  /* header section */
+.footer {
+  background-color: rgb(0, 4, 17);
+}
 
+.footer.container .mail__list {
+  text-align: start;
+}
+
+footer h5 {
+  color: rgb(225, 239, 230);
+  text-align: center;
+}
+
+footer a {
+  color: rgb(225, 239, 230);
+}
+.footer.container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10%;
+}
+
+.footer.container nav {
+  display: flex;
+}
+
+footer nav a {
+  font-size: 3rem;
+  padding: 4rem; /**/
+}
+
+footer input,
+button {
+  font-size: 30px;
+}
+
+.copyright {
+  background-color: rgb(0, 4, 17);
+}
+.copyright p {
+  text-align: end;
+  padding: 10px;
+  color: rgb(225, 239, 230);
+  font-size: large;
+}
+
+/* mobile media query */
+@media only screen and (max-width: 428px) {
+  /* header section */
+  header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 4rem;
+  }
   /* gallery section */
   .gallery {
     height: auto;
+    text-align: center;
+  }
+
+  .gallery div {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .gallery img {
+    width: 100vw;
+    height: 100vw;
+    margin: 3% auto;
   }
 
   /* about us section */
@@ -338,5 +468,23 @@ footer {
     height: auto;
     padding-top: 2.5vh;
     font-size: 2rem;
+    text-align: center;
+  }
+
+  .footer.container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer.container nav a {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  footer input,
+  button {
+    text-align: center;
+    margin-left: 10%;
   }
 }
