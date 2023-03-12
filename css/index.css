@@ -399,13 +399,16 @@ button {
 /* mobile media query */
 @media only screen and (max-width: 428px) {
   /* header section */
+  .header-title {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4rem;
+  }
   header nav {
     display: flex;
     flex-direction: column;
     text-align: center;
-  }
-  header h1 {
-    font-size: 4rem;
   }
   /* gallery section */
   .gallery {
@@ -428,7 +431,7 @@ button {
   /* about us section */
 
   .about {
-    height: 200vh;
+    height: 250vh;
   }
 
   .about h2 {
@@ -465,26 +468,43 @@ button {
 
   /* footer section */
   footer {
+    vertical-align: top;
+    flex-direction: column;
+    justify-content: center;
     height: auto;
+    width: 100%;
     padding-top: 2.5vh;
     font-size: 2rem;
     text-align: center;
   }
 
-  .footer.container {
+  footer div {
+    display: flex;
+    vertical-align: top;
     flex-direction: column;
-    text-align: center;
   }
 
-  .footer.container nav a {
+  footer nav {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: 2rem 0;
+    vertical-align: middle;
+  }
+
+  footer nav a {
     flex-direction: column;
     flex-wrap: wrap;
     padding: 0;
   }
 
+  footer p {
+    font-size: 1rem;
+    text-align: center;
+  }
   footer input,
   button {
     text-align: center;
-    margin-left: 10%;
+    margin: auto;
   }
 }
